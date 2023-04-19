@@ -52,7 +52,7 @@ dependencies {
         // Gradle のgenerated-jarとLoggerFactoryの衝突が起きるため暫定的に回避(本当はgenerated^jarを外すべき)
         exclude("ch.qos.logback", "logback-classic")
     }
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4")
+    runtimeOnly("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4") // Swaggerを利用するために追加
 
     runtimeOnly("jp.ne.simplex:composite-jjug-repository-memory:0.1.0-SNAPSHOT")
     runtimeOnly("jp.ne.simplex:composite-jjug-service:0.1.0-SNAPSHOT")

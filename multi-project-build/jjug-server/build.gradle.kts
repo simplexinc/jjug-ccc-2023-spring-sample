@@ -13,7 +13,7 @@ dependencies {
     implementation(project(JJUG.serviceApi))
 
     implementation(lib.spring.boot.starter.web)
-    implementation(lib.springdoc.openapi.starter.webmvc.ui)
+    runtimeOnly(lib.springdoc.openapi.starter.webmvc.ui) // Swaggerを利用するために追加
 
     runtimeOnly(project(JJUG.service))
     runtimeOnly(project(JJUG.repositoryMemory))
