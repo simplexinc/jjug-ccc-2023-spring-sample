@@ -1,12 +1,18 @@
 rootProject.name = "multi-project"
 
 include("jjug-domain")
-include("jjug-repository")
+include("jjug-repository-api")
+include("jjug-repository-memory")
+include("jjug-service-api")
+include("jjug-service")
 include("jjug-server")
 
 dependencyResolutionManagement {
     versionCatalogs {
         create("lib") {
+            val javaxVersion = version("javax", "1.3.+")
+            library("javax-annotation-api", "javax.annotation", "javax.annotation-api").versionRef(javaxVersion)
+
             val slf4jVersion = version("slf4j", "1.7.+")
             library("slf4j-simple", "org.slf4j", "slf4j-simple").versionRef(slf4jVersion)
 

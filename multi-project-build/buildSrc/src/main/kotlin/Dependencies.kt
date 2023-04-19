@@ -11,9 +11,12 @@ open class ProjectGroup(private vararg val paths: String = arrayOf("")) {
 
 fun Project.project(project: ProjectGroup.Project): Project = project(project.path)
 
-object Sample : ProjectGroup("") {
+object JJUG : ProjectGroup("") {
     val domain = project("jjug-domain")
-    val repository = project("jjug-repository")
+    val repositoryApi = project("jjug-repository-api")
+    val repositoryMemory = project("jjug-repository-memory")
+    val serviceApi = project("jjug-service-api")
+    val service = project("jjug-service")
     val server = project("jjug-server")
 }
 
