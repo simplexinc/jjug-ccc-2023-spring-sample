@@ -6,5 +6,5 @@ dependencies {
     implementation(project(JJUG.repositoryApi))
     implementation(project(JJUG.serviceApi))
 
-    implementation(lib.spring.context)
+    implementation(libs.spring.context)
 }

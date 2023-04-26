@@ -9,7 +9,7 @@ include("jjug-server")
 
 dependencyResolutionManagement {
     versionCatalogs {
-        create("lib") {
+        create("libs") {
             // ProtocolBuffers, GRPC
             val protobufVersion = version("protobuf", "3.19.+")
             library("proto-java", "com.google.protobuf", "protobuf-java").versionRef(protobufVersion)

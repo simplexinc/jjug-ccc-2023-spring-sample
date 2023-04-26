@@ -5,5 +5,5 @@ plugins {
 dependencies {
     implementation(project(JJUG.repositoryApi))
 
-    implementation(lib.spring.context)
+    implementation(libs.spring.context)
 }

@@ -2,7 +2,7 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     setup.java
-    id("org.springframework.boot") version lib.versions.springBoot
+    id("org.springframework.boot") version libs.versions.springBoot
 }
 
 tasks.named<BootJar>("bootJar") {
@@ -12,8 +12,8 @@ tasks.named<BootJar>("bootJar") {
 dependencies {
     implementation(project(JJUG.serviceApi))
 
-    implementation(lib.spring.boot.starter.web)
-    runtimeOnly(lib.springdoc.openapi.starter.webmvc.ui) // Swaggerを利用するために追加
+    implementation(libs.spring.boot.starter.web)
+    runtimeOnly(libs.springdoc.openapi.starter.webmvc.ui) // Swaggerを利用するために追加
 
     runtimeOnly(project(JJUG.service))
     runtimeOnly(project(JJUG.repositoryMemory))
