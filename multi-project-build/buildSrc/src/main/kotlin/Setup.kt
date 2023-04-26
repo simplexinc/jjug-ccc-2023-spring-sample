@@ -73,6 +73,15 @@ class SetupJava : SetupBase() {
             tasks.withType<Jar> {
                 exclude(".gitkeep")
             }
+
+            tasks.withType<Test> {
+                useJUnitPlatform()
+                systemProperties = mapOf(
+                    "junit.jupiter.execution.parallel.enabled" to "true",
+                    "junit.jupiter.execution.parallel.config.strategy" to "dynamic"
+                )
+                testLogging.showStandardStreams = true
+            }
         }
     }
 }
@@ -110,15 +119,6 @@ class SetupKotlin : Plugin<Project> {
                     jvmTarget = "17"
                     // freeCompilerArgs += "-Xkey=value"
                 }
-            }
-
-            tasks.withType<Test> {
-                useJUnitPlatform()
-                systemProperties = mapOf(
-                    "junit.jupiter.execution.parallel.enabled" to "true",
-                    "junit.jupiter.execution.parallel.config.strategy" to "dynamic"
-                )
-                testLogging.showStandardStreams = true
             }
 
             tasks.getByName<Copy>("processResources") {
