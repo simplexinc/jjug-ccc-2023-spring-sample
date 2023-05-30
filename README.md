@@ -12,4 +12,4 @@ This project represents how (gradle) multi-project build projects are related.
 The sample codes of `version catalog` and of `buildSrc` are also contained.
 
 # License
-The source code is licensed MIT,see LICENSE.
+The source code is licensed MIT, see LICENSE.
